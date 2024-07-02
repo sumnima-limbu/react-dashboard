@@ -1,9 +1,32 @@
-import "./index.css";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Error, Home, Subscription, User } from "./pages";
+import DashboardLayout from "./components/layout/DashboardLayout";
+
+const router = createBrowserRouter([
+  {
+    element: <DashboardLayout />,
+    errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/subscriptions",
+        element: <Subscription />,
+      },
+      {
+        path: "/users",
+        element: <User />,
+      },
+    ],
+  },
+]);
 
 function App() {
   return (
     <>
-      <div>This is the main dashboard.</div>
+      <RouterProvider router={router} />
     </>
   );
 }
