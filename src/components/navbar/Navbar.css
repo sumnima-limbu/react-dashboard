@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 24px;
+  /* border: 1px solid red; */
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  height: 100%;
+}
+
+.nav__container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  font-size: 16px;
+}
+.nav__icon {
+  font-size: 32px;
+  display: flex;
+  height: 100%;
+}
