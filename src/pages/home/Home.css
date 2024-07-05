@@ -1,0 +1,93 @@
+.home-container {
+  padding: 20px;
+}
+
+.home-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.home-container {
+  padding: 20px;
+  background-color: #f7f8fa;
+}
+
+.home-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Distribute space evenly between cards */
+}
+
+.card {
+  flex: 1 1 calc(25% - 20px); /* Adjust flex basis for responsive width */
+  min-width: 150px; /* Ensure a minimum width for cards */
+}
+
+.chart {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 1;
+}
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .charts-container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 calc(33.33% - 20px); /* Adjust flex basis for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 10px; /* Reduce gap between cards */
+  }
+
+  .card {
+    flex: 1 1 100%; /* Cards take full width on small screens */
+    margin-bottom: 10px; /* Add space between cards */
+  }
+
+  .charts-container {
+    gap: 10px; /* Reduce gap between charts */
+  }
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 10px; /* Reduce padding on small screens */
+  }
+
+  .home-container h1 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .card {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+
+  .chart {
+    padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
