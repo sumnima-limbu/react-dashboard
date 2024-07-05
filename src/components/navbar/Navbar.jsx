@@ -13,7 +13,6 @@ const Navbar = () => {
         </span>
         <span className="nav__container">
           <HiUserCircle className="nav__icon" />
-          <p>Sumnima Limbu</p>
         </span>
       </nav>
     </header>
