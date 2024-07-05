@@ -1,5 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { Error, Home, Subscription, User } from "./pages";
+import { Error, Home, Subscription, SubscriptionList, User } from "./pages";
 import DashboardLayout from "./components/layout/DashboardLayout";
 
 const router = createBrowserRouter([
@@ -12,12 +12,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/subscriptions",
-        element: <Subscription />,
-      },
-      {
         path: "/users",
         element: <User />,
+      },
+      {
+        path: "/subscriptions",
+        element: <SubscriptionList />,
+      },
+      {
+        path: "/subscription/:id",
+        element: <Subscription />,
       },
     ],
   },
